@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METROFUTSAL — Space & Pitch</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400&f[]=cabinet-grotesk@800,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Satoshi', 'sans-serif'],
+            display: ['Cabinet Grotesk', 'sans-serif'],
+          },
+          colors: {
+            brand: '#CCFF00',
+            darksurface: '#0A0A0A',
+            cardbg: '#141414',
+            bordercol: '#222222',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Satoshi', sans-serif; background-color: #0A0A0A; color: #F5F5F7; }
+    h1, h2, h3, h4, .font-display { font-family: 'Cabinet Grotesk', sans-serif; }
+    .glass { background: rgba(20, 20, 20, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .glow-brand { box-shadow: 0 0 50px -10px rgba(204, 255, 0, 0.15); }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-[#0A0A0A] text-[#F5F5F7] antialiased selection:bg-[#CCFF00] selection:text-black">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-[#222222]">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-2 group">
+        <div class="w-10 h-10 bg-[#CCFF00] rounded-lg flex items-center justify-center text-black font-display font-black text-xl tracking-tighter group-hover:rotate-6 transition duration-300">
+          M
+        </div>
+        <span class="text-xl font-display font-extrabold tracking-tight text-white">METRO<span class="text-[#CCFF00]">FUTSAL</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
+        <a href="#pitch" class="hover:text-white transition">Pitch</a>
+        <a href="#vibe" class="hover:text-white transition">The Vibe</a>
+        <a href="#rates" class="hover:text-white transition">Rates & Booking</a>
+        <a href="#faq" class="hover:text-white transition">FAQ</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="#rates" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#CCFF00] hover:bg-[#b3e000] text-black font-display font-bold text-sm tracking-wide transition duration-300">
+          Book Session
+        </a>
+        <button id="menu-btn" class="md:hidden text-zinc-400 hover:text-white focus:outline-none">
+          <i class="fa-solid fa-bars-staggered text-xl"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 border-t border-[#222222] glass">
+      <div class="flex flex-col space-y-4 text-sm font-medium text-zinc-300">
+        <a href="#pitch" class="hover:text-[#CCFF00] transition py-1">Pitch</a>
+        <a href="#vibe" class="hover:text-[#CCFF00] transition py-1">The Vibe</a>
+        <a href="#rates" class="hover:text-[#CCFF00] transition py-1">Rates & Booking</a>
+        <a href="#faq" class="hover:text-[#CCFF00] transition py-1">FAQ</a>
+        <a href="#rates" class="inline-block text-center w-full py-3 rounded-full bg-[#CCFF00] text-black font-display font-bold text-sm">Book Session</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=1920&q=80" alt="Pitch Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full text-center">
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-300 mb-8 tracking-wide">
+        <span class="w-2 h-2 rounded-full bg-[#CCFF00] animate-pulse"></span>
+        <span>OPEN 08:00 — 24:00 WIB • SOUTH JAKARTA</span>
+      </div>
+
+      <h1 class="text-5xl sm:text-7xl lg:text-8xl font-display font-black tracking-tight leading-[0.95] mb-8 uppercase">
+        Not Your Average <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#CCFF00] via-[#88cc00] to-teal-400">Futsal Court.</span>
+      </h1>
+
+      <p class="text-base sm:text-xl text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed mb-12">
+        Industrial aesthetic, FIFA-grade turf, ambient lighting, and zero friction booking. Built for high-pace matches and post-game chill.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#rates" class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#CCFF00] hover:bg-[#b3e000] text-black font-display font-extrabold text-base tracking-wide transition duration-300 shadow-lg shadow-[#CCFF00]/10 flex items-center justify-center space-x-2">
+          <span>Book Your Slot</span>
+          <i class="fa-solid fa-arrow-right-long text-sm"></i>
+        </a>
+        <a href="#pitch" class="w-full sm:w-auto px-8 py-4 rounded-full bg-zinc-900/80 hover:bg-zinc-800 text-white border border-zinc-800 font-display font-bold text-base tracking-wide transition duration-300 flex items-center justify-center">
+          Explore Pitch
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-20 pt-12 border-t border-zinc-900 text-left">
+        <div class="bg-[#141414]/50 border border-[#222222] p-5 rounded-2xl">
+          <p class="text-zinc-500 text-xs font-mono mb-1 uppercase tracking-wider">Surface</p>
+          <p class="text-white font-display font-bold text-lg">FIFA Monofilament</p>
+        </div>
+        <div class="bg-[#141414]/50 border border-[#222222] p-5 rounded-2xl">
+          <p class="text-zinc-500 text-xs font-mono mb-1 uppercase tracking-wider">Lighting</p>
+          <p class="text-white font-display font-bold text-lg">500 Lux Anti-Glare</p>
+        </div>
+        <div class="bg-[#141414]/50 border border-[#222222] p-5 rounded-2xl">
+          <p class="text-zinc-500 text-xs font-mono mb-1 uppercase tracking-wider">Facilities</p>
+          <p class="text-white font-display font-bold text-lg">Hot Shower & Locker</p>
+        </div>
+        <div class="bg-[#141414]/50 border border-[#222222] p-5 rounded-2xl">
+          <p class="text-zinc-500 text-xs font-mono mb-1 uppercase tracking-wider">Hangout</p>
+          <p class="text-white font-display font-bold text-lg">Craft Coffee & Wi-Fi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pitch Section -->
+  <section id="pitch" class="py-28 relative border-t border-[#222222] bg-[#0c0c0c]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-[#CCFF00] font-mono text-xs tracking-widest uppercase mb-3 block">01 // The Arenas</span>
+          <h2 class="text-4xl sm:text-5xl font-display font-extrabold tracking-tight">Engineered For Performance</h2>
+        </div>
+        <p class="text-zinc-400 max-w-md mt-4 md:mt-0 text-sm leading-relaxed">
+          Dua lapangan dengan spesifikasi turnamen nasional. Dirancang untuk kontrol bola maksimal dan meminimalisir cedera sendi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Pitch 1 -->
+        <div class="bg-[#141414] rounded-3xl border border-[#222222] overflow-hidden group hover:border-[#CCFF00]/40 transition duration-500">
+          <div class="relative h-80 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?auto=format&fit=crop&w=1000&q=80" alt="Pitch A" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-mono text-[#CCFF00] border border-[#CCFF00]/20">
+              PITCH 01 • SYNTHETIC GRASS
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-display font-bold mb-2">Monofilament Turf Pro</h3>
+            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Permukaan rumput sintetis generasi terbaru dengan redaman benturan optimal. Favorit untuk laga kompetitif berintensitas tinggi.</p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-300">FIFA Standard</span>
+              <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-300">Shock Pad Layer</span>
+              <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-300">Best Grip</span>
+            </div>
+            <div class="flex items-center justify-between pt-6 border-t border-[#222222]">
+              <div>
+                <span class="text-xs text-zinc-500 block">Starts from</span>
+                <span class="text-lg font-display font-bold text-white">Rp 120k <span class="text-xs text-zinc-400 font-normal">/hour</span></span>
+              </div>
+              <a href="#rates" class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-[#CCFF00] hover:text-black text-white text-xs font-display font-bold transition duration-300 border border-zinc-800">
+                Check Schedule
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pitch 2 -->
+        <div class="bg-[#141414] rounded-3xl border border-[#222222] overflow-hidden group hover:border-[#CCFF00]/40 transition duration-500">
+          <div class="relative h-80 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1000&q=80" alt="Pitch B" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-mono text-cyan-400 border border-cyan-500/20">
+              PITCH 02 • VINYL MAT
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-display font-bold mb-2">Interlocking Vinyl Arena</h3>
+            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Standar turnamen nasional resmi. Pantulan bola sangat akurat, direkomendasikan untuk teknik passing cepat & tiki-taka.</p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-300">Tournament Grade</span>
+              <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-300">Anti-Slip Surface</span>
+              <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-300">Fast Ball Roll</span>
+            </div>
+            <div class="flex items-center justify-between pt-6 border-t border-[#222222]">
+              <div>
+                <span class="text-xs text-zinc-500 block">Starts from</span>
+                <span class="text-lg font-display font-bold text-white">Rp 130k <span class="text-xs text-zinc-400 font-normal">/hour</span></span>
+              </div>
+              <a href="#rates" class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-[#CCFF00] hover:text-black text-white text-xs font-display font-bold transition duration-300 border border-zinc-800">
+                Check Schedule
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vibe Section / Amenities -->
+  <section id="vibe" class="py-28 bg-[#0A0A0A] border-t border-[#222222]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <span class="text-[#CCFF00] font-mono text-xs tracking-widest uppercase mb-3 block">02 // The Atmosphere</span>
+        <h2 class="text-4xl sm:text-5xl font-display font-extrabold tracking-tight mb-4">More Than Just A Game</h2>
+        <p class="text-zinc-400 text-sm">Fasilitas pendukung dirancang untuk kenyamanan total sebelum dan sesudah tanding.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-[#141414] border border-[#222222] p-8 rounded-3xl relative overflow-hidden group">
+          <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center text-[#CCFF00] text-lg mb-6 border border-zinc-800">
+            <i class="fa-solid fa-shower"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold mb-2">Locker & Hot Shower</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Kamar ganti modern dengan air hangat dan pengaman loker digital pribadi agar barang bawaanmu aman selama bermain.</p>
+        </div>
+
+        <div class="bg-[#141414] border border-[#222222] p-8 rounded-3xl relative overflow-hidden group">
+          <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center text-[#CCFF00] text-lg mb-6 border border-zinc-800">
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold mb-2">The Club Lounge</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Tempat nongkrong pasca-tanding dengan menu artisan coffee, fresh juice, dan hidangan ringan ber-Wi-Fi kencang.</p>
+        </div>
+
+        <div class="bg-[#141414] border border-[#222222] p-8 rounded-3xl relative overflow-hidden group">
+          <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center text-[#CCFF00] text-lg mb-6 border border-zinc-800">
+            <i class="fa-solid fa-square-parking"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold mb-2">Secure Parking Area</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Area parkir luas untuk mobil dan motor, dijaga petugas keamanan 24 jam penuh dilengkapi kamera CCTV.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rates & Booking Section -->
+  <section id="rates" class="py-28 bg-[#0c0c0c] border-t border-[#222222]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <span class="text-[#CCFF00] font-mono text-xs tracking-widest uppercase mb-3 block">03 // Pricing & Booking</span>
+        <h2 class="text-4xl sm:text-5xl font-display font-extrabold tracking-tight mb-4">Transparent Rates</h2>
+        <p class="text-zinc-400 text-sm">Pilih waktu tandingmu. Booking langsung instan via WhatsApp.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <!-- Tariffs Card -->
+        <div class="bg-[#141414] border border-[#222222] p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-8 pb-6 border-b border-[#222222]">
+              <h3 class="text-2xl font-display font-bold">Tarif Per Jam</h3>
+              <span class="px-3 py-1 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] text-xs font-mono border border-[#CCFF00]/20">Flat Rate</span>
+            </div>
+
+            <!-- Pitch 1 rates -->
+            <div class="mb-8">
+              <p class="text-xs font-mono text-zinc-500 uppercase tracking-wider mb-4">Pitch 1 (Synthetic Grass)</p>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center bg-zinc-900/60 px-4 py-3 rounded-xl border border-zinc-800/80">
+                  <span class="text-sm text-zinc-300">Daytime (08:00 - 17:00)</span>
+                  <span class="font-display font-bold text-white">Rp 120.000</span>
+                </div>
+                <div class="flex justify-between items-center bg-zinc-900/60 px-4 py-3 rounded-xl border border-zinc-800/80">
+                  <span class="text-sm text-zinc-300">Nighttime (17:00 - 24:00)</span>
+                  <span class="font-display font-bold text-[#CCFF00]">Rp 170.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pitch 2 rates -->
+            <div>
+              <p class="text-xs font-mono text-zinc-500 uppercase tracking-wider mb-4">Pitch 2 (Vinyl Mat)</p>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center bg-zinc-900/60 px-4 py-3 rounded-xl border border-zinc-800/80">
+                  <span class="text-sm text-zinc-300">Daytime (08:00 - 17:00)</span>
+                  <span class="font-display font-bold text-white">Rp 130.000</span>
+                </div>
+                <div class="flex justify-between items-center bg-zinc-900/60 px-4 py-3 rounded-xl border border-zinc-800/80">
+                  <span class="text-sm text-zinc-300">Nighttime (17:00 - 24:00)</span>
+                  <span class="font-display font-bold text-cyan-400">Rp 180.000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-[#222222] text-xs text-zinc-500 flex items-center space-x-2">
+            <i class="fa-solid fa-circle-info text-[#CCFF00]"></i>
+            <span>Sudah termasuk rompi latihan & bola standar pertandingan.</span>
+          </div>
+        </div>
+
+        <!-- Booking Form / WhatsApp Direct -->
+        <div class="bg-[#141414] border border-[#222222] p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+          <div>
+            <h3 class="text-2xl font-display font-bold mb-2">Fast Booking</h3>
+            <p class="text-zinc-400 text-sm mb-8">Isi detail singkat di bawah dan langsung terhubung dengan admin via WhatsApp.</p>
+
+            <form id="booking-form" class="space-y-4">
+              <div>
+                <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Nama Tim / Pemesan</label>
+                <input type="text" id="name" required placeholder="Contoh: FC Senopati" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#CCFF00] transition">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Pilihan Lapangan</label>
+                  <select id="pitch-choice" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#CCFF00] transition">
+                    <option value="Pitch 1 - Synthetic">Pitch 1 (Synthetic)</option>
+                    <option value="Pitch 2 - Vinyl">Pitch 2 (Vinyl)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Durasi (Jam)</label>
+                  <select id="duration" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#CCFF00] transition">
+                    <option value="1 Jam">1 Jam</option>
+                    <option value="2 Jam">2 Jam</option>
+                    <option value="3 Jam">3 Jam</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Tanggal Main</label>
+                  <input type="date" id="date" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#CCFF00] transition">
+                </div>
+                <div>
+                  <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Jam Mulai</label>
+                  <input type="time" id="time" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#CCFF00] transition">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="mt-8 space-y-3">
+            <button type="button" id="whatsapp-btn" class="w-full py-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-700 font-display font-bold text-sm tracking-wide transition duration-300 flex items-center justify-center space-x-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Booking Saja (Bayar di Lokasi)</span>
+            </button>
+            <button type="button" id="qris-btn" class="w-full py-4 rounded-xl bg-[#CCFF00] hover:bg-[#b3e000] text-black font-display font-extrabold text-sm tracking-wide transition duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-[#CCFF00]/10">
+              <i class="fa-solid fa-qrcode text-lg"></i>
+              <span>Booking & Bayar Instan (QRIS)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QRIS Modal -->
+  <div id="qris-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="bg-[#141414] border border-[#222222] rounded-3xl max-w-md w-full p-6 sm:p-8 relative text-center">
+      <button id="close-modal" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-2">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <span class="px-3 py-1 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] text-xs font-mono border border-[#CCFF00]/20 inline-block mb-4">INSTANT PAYMENT</span>
+      <h3 class="text-2xl font-display font-bold mb-2">Scan QRIS untuk Bayar</h3>
+      <p class="text-zinc-400 text-sm mb-6">Scan menggunakan GoPay, OVO, Dana, BCA, atau Mobile Banking pilihanmu.</p>
+
+      <!-- QR Box Placeholder -->
+      <div class="bg-white p-4 rounded-2xl w-56 h-56 mx-auto mb-6 flex flex-col items-center justify-center shadow-inner">
+        <i class="fa-solid fa-qrcode text-8xl text-black"></i>
+        <span class="text-xs font-mono text-zinc-600 mt-2">METROFUTSAL OFFICIAL</span>
+      </div>
+
+      <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-4 mb-6 text-left text-xs space-y-2">
+        <div class="flex justify-between">
+          <span class="text-zinc-400">Tim:</span>
+          <span id="summary-name" class="font-bold text-white">-</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-zinc-400">Lapangan & Durasi:</span>
+          <span id="summary-detail" class="font-bold text-white">-</span>
+        </div>
+        <div class="flex justify-between pt-2 border-t border-zinc-800">
+          <span class="text-zinc-400">Total Pembayaran:</span>
+          <span id="summary-price" class="font-display font-bold text-[#CCFF00]">Rp 120.000</span>
+        </div>
+      </div>
+
+      <button id="confirm-qris-btn" class="w-full py-4 rounded-xl bg-[#CCFF00] hover:bg-[#b3e000] text-black font-display font-extrabold text-sm tracking-wide transition flex items-center justify-center space-x-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Konfirmasi Pembayaran via WhatsApp</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-28 bg-[#0A0A0A] border-t border-[#222222]">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <span class="text-[#CCFF00] font-mono text-xs tracking-widest uppercase mb-3 block">04 // FAQ</span>
+        <h2 class="text-4xl sm:text-5xl font-display font-extrabold tracking-tight mb-4">Pertanyaan Umum</h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-[#141414] border border-[#222222] rounded-2xl p-6">
+          <h4 class="font-display font-bold text-lg mb-2 text-white">Bagaimana cara melakukan pembayaran DP?</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">Setelah terhubung via WhatsApp dengan admin kami, Anda akan diberikan nomor rekening transfer atau QRIS sebesar minimal 50% untuk mengamankan jadwal.</p>
+        </div>
+        <div class="bg-[#141414] border border-[#222222] rounded-2xl p-6">
+          <h4 class="font-display font-bold text-lg mb-2 text-white">Apakah bisa reschedule jadwal jika ada halangan?</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">Bisa, maksimal konfirmasi 1x24 jam sebelum jadwal tanding berlangsung dan bergantung pada ketersediaan slot kosong.</p>
+        </div>
+        <div class="bg-[#141414] border border-[#222222] rounded-2xl p-6">
+          <h4 class="font-display font-bold text-lg mb-2 text-white">Apakah tersedia penyewaan sepatu dan rompi tim?</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">Rompi latihan sudah disediakan gratis. Untuk penyewaan sepatu futsal tersedia di front desk dengan berbagai ukuran.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#050505] border-t border-[#222222] py-16 text-zinc-400 text-sm">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <a href="#" class="flex items-center space-x-2 mb-4">
+          <div class="w-8 h-8 bg-[#CCFF00] rounded-lg flex items-center justify-center text-black font-display font-black text-lg">M</div>
+          <span class="text-lg font-display font-extrabold tracking-tight text-white">METRO<span class="text-[#CCFF00]">FUTSAL</span></span>
+        </a>
+        <p class="text-zinc-500 text-sm max-w-sm leading-relaxed">Pusat futsal modern berstandar internasional dengan konsep industrial bersih, nyaman, dan strategis di Jakarta Selatan.</p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-display font-bold text-sm mb-4 tracking-wide uppercase">Navigasi</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="#pitch" class="hover:text-white transition">Pitch & Spesifikasi</a></li>
+          <li><a href="#vibe" class="hover:text-white transition">Fasilitas & Lounge</a></li>
+          <li><a href="#rates" class="hover:text-sm text-white transition">Tarif & Jadwal</a></li>
+          <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-display font-bold text-sm mb-4 tracking-wide uppercase">Kontak & Lokasi</h4>
+        <p class="text-xs text-zinc-500 mb-2 leading-relaxed"><i class="fa-solid fa-location-dot text-[#CCFF00] mr-2"></i>Jl. Senopati Raya No. 45, Jakarta Selatan</p>
+        <p class="text-xs text-zinc-500"><i class="fa-solid fa-phone text-[#CCFF00] mr-2"></i>+62 812-3456-7890</p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-600">
+      <p>&copy; 2026 METROFUTSAL. All Rights Reserved.</p>
+      <div class="flex space-x-6 mt-4 sm:mt-0">
+        <a href="#" class="hover:text-zinc-400 transition"><i class="fa-brands fa-instagram text-base"></i></a>
+        <a href="#" class="hover:text-zinc-400 transition"><i class="fa-brands fa-tiktok text-base"></i></a>
+        <a href="#" class="hover:text-zinc-400 transition"><i class="fa-brands fa-whatsapp text-base"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Script for WhatsApp Booking -->
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Calculate and display price helper
+    function getBookingDetails() {
+      const name = document.getElementById('name').value.trim();
+      const pitch = document.getElementById('pitch-choice').value;
+      const durationVal = document.getElementById('duration').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const hours = parseInt(durationVal) || 1;
+
+      // Rate calculation
+      let baseRate = 120000;
+      if (pitch.includes('Vinyl')) {
+        baseRate = 130000;
+        const hourNum = parseInt(time.split(':')[0]) || 0;
+        if (hourNum >= 17 && hourNum < 24) baseRate = 180000;
+      } else {
+        const hourNum = parseInt(time.split(':')[0]) || 0;
+        if (hourNum >= 17 && hourNum < 24) baseRate = 170000;
+      }
+
+      const total = baseRate * hours;
+      return { name, pitch, duration: durationVal, date, time, total };
+    }
+
+    // Booking Saja (Bayar di Tempat)
+    document.getElementById('whatsapp-btn').addEventListener('click', () => {
+      const details = getBookingDetails();
+      if (!details.name || !details.date || !details.time) {
+        alert('Mohon isi Nama Tim, Tanggal, dan Jam Main terlebih dahulu!');
+        document.getElementById('name').focus();
+        return;
+      }
+
+      const message = `Halo Admin METROFUTSAL, saya ingin booking lapangan:%0A%0A` +
+                      `• Nama Tim: *${encodeURIComponent(details.name)}*%0A` +
+                      `• Lapangan: *${encodeURIComponent(details.pitch)}*%0A` +
+                      `• Durasi: *${encodeURIComponent(details.duration)}*%0A` +
+                      `• Tanggal: *${encodeURIComponent(details.date)}*%0A` +
+                      `• Jam Mulai: *${encodeURIComponent(details.time)}*%0A` +
+                      `• Metode: *Bayar di Tempat / DP%0A%0A` +
+                      `Mohon konfirmasi ketersediaannya. Terima kasih!`;
+
+      const waNumber = '6281234567890';
+      window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank');
+    });
+
+    // QRIS Modal Handler
+    const qrisModal = document.getElementById('qris-modal');
+    document.getElementById('qris-btn').addEventListener('click', () => {
+      const details = getBookingDetails();
+      if (!details.name || !details.date || !details.time) {
+        alert('Mohon isi Nama Tim, Tanggal, dan Jam Main terlebih dahulu!');
+        document.getElementById('name').focus();
+        return;
+      }
+
+      document.getElementById('summary-name').innerText = details.name;
+      document.getElementById('summary-detail').innerText = `${details.pitch} (${details.duration})`;
+      document.getElementById('summary-price').innerText = `Rp ${details.total.toLocaleString('id-ID')}`;
+      
+      qrisModal.classList.remove('hidden');
+    });
+
+    document.getElementById('close-modal').addEventListener('click', () => {
+      qrisModal.classList.add('hidden');
+    });
+
+    // Confirm QRIS Payment via WhatsApp
+    document.getElementById('confirm-qris-btn').addEventListener('click', () => {
+      const details = getBookingDetails();
+      const message = `Halo Admin METROFUTSAL, saya sudah melakukan pembayaran via QRIS:%0A%0A` +
+                      `• Nama Tim: *${encodeURIComponent(details.name)}*%0A` +
+                      `• Lapangan: *${encodeURIComponent(details.pitch)}*%0A` +
+                      `• Durasi: *${encodeURIComponent(details.duration)}*%0A` +
+                      `• Tanggal: *${encodeURIComponent(details.date)}*%0A` +
+                      `• Jam Mulai: *${encodeURIComponent(details.time)}*%0A` +
+                      `• Total Bayar: *Rp ${details.total.toLocaleString('id-ID')}*%0A` +
+                      `• Status: *LUNAS (QRIS)*%0A%0A` +
+                      `Berikut saya lampirkan bukti transfer/screenshot QRIS. Mohon konfirmasinya. Terima kasih!`;
+
+      const waNumber = '6281234567890';
+      qrisModal.classList.add('hidden');
+      window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank');
+    });
+  </script>
+</body>
+</html>
